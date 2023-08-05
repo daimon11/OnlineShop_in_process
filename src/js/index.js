@@ -340,7 +340,7 @@ if (htmlName === 'basket') {
     document.querySelector('.buy__items-info--type_discount').innerHTML = result[3].alldiscount + ' ₽';
     document.querySelector('.buy__shiping-wrapper').append(result[3].imagesBlock);
 
-    basketControl(document.querySelectorAll('.buy__item'), basketData);
+    basketControl(document.querySelectorAll('.buy__item'), basketData, basketGoods);
   });
   console.log('basket !!!');
 }
