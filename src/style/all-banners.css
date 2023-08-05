@@ -1,0 +1,658 @@
+.all-banners__discount-time::before,
+.all-banners__red-cross::before,
+.all-banners__december::before,
+.all-banners__dresses::before,
+.all-banners__household-chemicals::before {
+  content: '';
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #FFFFFF;
+  padding: 24px 9px;
+  background: #FFBD13;
+  border-radius: 50%;
+}
+
+.all-banners__discount-time::before,
+.all-banners__december::before,
+.all-banners__dresses::before {
+  content: '-25%';
+  right: 20px;
+  bottom: 20px;
+}
+
+.all-banners__december::before {
+  content: '-15%';
+}
+
+.all-banners__dresses::before {
+  content: '-55%';
+}
+
+.all-banners__red-cross::before,
+.all-banners__household-chemicals::before {
+  content: '-40%';
+  top: 20px;
+  left: 20px;
+}
+
+.all-banners__household-chemicals::before {
+  content: '-25%';
+}
+
+/* баннеры xl */
+
+.banner-size-xl {
+  position: relative;
+  height: 228px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -30px bottom 0;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.banner-size-xl::after,
+.banner-size-l::after,
+.all-banners__two-pairs::after,
+.all-banners__christmas-decorations::after,
+.all-banners__dresses::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* баннеры l */
+
+.banner-size-l {
+  position: relative;
+  height: 228px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -30px bottom 0;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* Книга - лучший подарок */
+
+.all-banners__book {
+  background-image: url(../img/banner002.jpg);
+  grid-area: book;
+}
+
+.all-banners__book-title {
+  max-width: 190px;
+  left: 20px;
+  right: 10px;
+  bottom: 20px;
+}
+
+/* Время скидок */
+
+.all-banners__discount-time {
+  background-image: url(../img/banner003.jpg);
+  background-position: left -45px top 0;
+  grid-area: discount-time;
+}
+
+.all-banners__discount-time-title {
+  max-width: 206px;
+  bottom: 122px;
+  left: 14px;
+}
+
+/* Вторая пара кроссовок */
+
+.all-banners__two-pairs {
+  position: relative;
+  background-image: url(../img/banner005.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 0 top 0;
+  font-weight: 400;
+  height: 516px;
+  border-radius: 20px;
+  grid-area: two-pairs;
+}
+
+.all-banners__two-pairs-title {
+  max-width: 510px;
+  padding: 24px 26px;
+  background: #38C0EB;
+  border-radius: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 14px;
+}
+
+/* Идеи новогодних подарков */
+
+.all-banners__gift-ideas {
+  background-image: url(../img/banner007.jpg);
+  background-position: left 0 bottom -50px;
+  grid-area: gift-ideas;
+}
+
+.all-banners__gift-ideas-title {
+  max-width: 345px;
+  left: 30px;
+  bottom: 30px;
+}
+
+/* красные кросы */
+
+.all-banners__red-cross {
+  background-image: url(../img/banner004.jpg);
+  background-position: left 0 bottom -50px;
+  grid-area: red-cross;
+}
+
+/* выгодно в декабре */
+
+.all-banners__december {
+  background-image: url(../img/banner006.jpg);
+  background-position: left 0 bottom -60px;
+  grid-area: december;
+}
+
+.all-banners__december-title {
+  max-width: 393px;
+  left: 30px;
+  bottom: 40px;
+}
+
+/* Новогодние украшения */
+
+.all-banners__christmas-decorations {
+  position: relative;
+  background-image: url(../img/banner009.jpg);
+  background-position: left 0 bottom -150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 516px;
+  border-radius: 20px;
+  grid-area: christmas-decorations;
+}
+
+.all-banners__christmas-decorations-title {
+  position: absolute;
+  padding: 30px 40px;
+  color: #F91155;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  border-radius: 20px;
+  bottom: 50px;
+  left: 50px;
+}
+
+/* девушка в красном */
+
+.all-banners__dresses {
+  position: relative;
+  background-image: url(../img/banner010.jpg);
+  background-position: left -90px bottom 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* max-width: 245px; */
+  height: 516px;
+  border-radius: 20px;
+  grid-area: dresses;
+}
+
+.all-banners__double-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: double-block;
+}
+
+/* На бытовую химию */
+
+.all-banners__household-chemicals {
+  background-image: url(../img/banner011.jpg);
+  background-position: left -70px bottom 0px;
+  width: 100%;
+}
+
+.all-banners__household-chemicals-title {
+  bottom: 20px;
+  left: 20px;
+}
+
+/* красные шарики */
+
+.all-banners__red-balls {
+  background-image: url(../img/banner012.jpg);
+  background-position: left 0 bottom 0;
+  background-size: 180%;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 100%;
+}
+
+/* настраиваю грид */
+
+.all-banners__wrapper {
+  display: grid;
+  grid-template-columns: minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px);
+  gap: 60px 60px;
+  grid-template-areas:
+    "book discount-time two-pairs two-pairs gift-ideas gift-ideas"
+    "red-cross red-cross two-pairs two-pairs december december"
+    "christmas-decorations christmas-decorations christmas-decorations christmas-decorations dresses double-block"
+    "christmas-decorations christmas-decorations christmas-decorations christmas-decorations dresses double-block"
+}
+
+@media (max-width: 1530px) {
+
+  /* баннеры xl */
+
+  .banner-size-xl {
+    max-width: 464px;
+    max-height: 194px;
+    border-radius: 16px;
+    align-self: center;
+  }
+
+  /* баннеры l */
+
+  .banner-size-l {
+    max-width: 217px;
+    max-height: 202px;
+    border-radius: 16px;
+    align-self: center;
+  }
+
+  /* вторая пара в подарок */
+
+  .all-banners__two-pairs {
+    background-position: left 0 top -80px;
+    height: 418px;
+    border-radius: 16px;
+    align-self: end;
+  }
+
+  .all-banners__wrapper {
+    grid-template-columns: minmax(140px, 217px) minmax(140px, 217px) minmax(140px, 217px) minmax(140px, 217px);
+    gap: 18px 30px;
+    grid-template-areas:
+      "book discount-time two-pairs two-pairs"
+      "red-cross red-cross two-pairs two-pairs"
+      "gift-ideas gift-ideas dresses double-block"
+      "december december dresses double-block"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations";
+  }
+
+  /* Вторая пара кроссовок */
+
+  .all-banners__two-pairs-title {
+    font-weight: 406;
+    max-width: 400px;
+  }
+
+  .size-block {
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* выгодно в декабре */
+
+  .all-banners__december-title {
+    left: 21px;
+  }
+
+  /* Новогодние украшения */
+
+  .all-banners__christmas-decorations {
+    max-width: 940px;
+    margin-top: 5px;
+    max-height: 418px;
+    border-radius: 16px;
+    align-items: flex-end;
+  }
+
+  .all-banners__christmas-decorations-title {
+    padding: 24px 47px;
+    bottom: 26px;
+    left: 26px;
+  }
+
+  /* девушка в красном */
+
+  .all-banners__dresses {
+    height: 410px;
+    align-self: center;
+  }
+
+  /* бытовая химия */
+
+  .all-banners__household-chemicals,
+  .all-banners__red-balls {
+    max-height: 188px;
+  }
+}
+
+@media (max-width: 910px) {
+
+  .all-banners__discount-time::before,
+  .all-banners__red-cross::before,
+  .all-banners__december::before,
+  .all-banners__dresses::before,
+  .all-banners__household-chemicals::before {
+    font-size: 16px;
+    padding: 14px 6px;
+  }
+
+  .all-banners__discount-time::before,
+  .all-banners__december::before,
+  .all-banners__dresses::before {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .all-banners__red-cross::before,
+  .all-banners__household-chemicals::before {
+    top: 10px;
+    left: 10px;
+  }
+
+  /* баннеры xl */
+
+  .banner-size-xl {
+    max-height: 126px;
+    border-radius: 12px;
+  }
+
+  /* баннеры l */
+
+  .banner-size-l {
+    max-height: 130px;
+    border-radius: 12px;
+  }
+
+  .all-banners__wrapper {
+    grid-template-columns: minmax(100px, 140px) minmax(100px, 140px) minmax(100px, 182px) minmax(100px, 178px);
+    gap: 22px 20px;
+  }
+
+  /* Книга - лучший подарок */
+
+  .all-banners__book-title {
+    max-width: 117px;
+    left: 10px;
+    bottom: 15px;
+  }
+
+  /* Время скидок */
+
+  .all-banners__discount-time-title {
+    top: 15px;
+    left: 14px;
+    right: 14px;
+  }
+
+  /* Вторая пара кроссовок */
+
+  .all-banners__two-pairs {
+    background-position: left 0 top -100px bottom 0;
+    background-size: cover;
+    max-height: 278px;
+    border-radius: 12px;
+  }
+
+  .all-banners__two-pairs-title {
+    padding: 12px 20px 20px 26px;
+    font-size: 16px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .size-block {
+    display: inline-block;
+    width: auto;
+    line-height: 150%;
+  }
+
+  /* красные кросы */
+
+  .all-banners__red-cross {
+    background-image: url(../img/banner004.jpg);
+    background-position: left 0 top -45px;
+    grid-area: red-cross;
+  }
+
+  /* Идеи новогодних подарков */
+
+  .all-banners__gift-ideas {
+    background-position: left 0 bottom -30px;
+  }
+
+  .all-banners__gift-ideas-title {
+    font-size: 16px;
+    left: 18px;
+    bottom: 21px;
+  }
+
+  /* выгодно в декабре */
+
+  .all-banners__december {
+    background-position: left 0 top -20px;
+  }
+
+  .all-banners__december-title {
+    left: 18px;
+    bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* девушка в красном */
+
+  .all-banners__dresses {
+    max-height: 273px;
+    align-self: center;
+    background-position: left -20px bottom 0;
+  }
+
+  /* бытовая химия */
+
+  .all-banners__household-chemicals,
+  .all-banners__red-balls {
+    max-height: 131px;
+  }
+
+  .all-banners__household-chemicals {
+    background-position: left -20px bottom 0;
+  }
+
+  /* Новогодние украшения */
+
+  .all-banners__christmas-decorations {
+    max-height: 357px;
+    margin: 0;
+    border-radius: 12px;
+    background-position: left 0 bottom -30px;
+    background-size: cover;
+  }
+
+  .all-banners__christmas-decorations-title {
+    padding: 24px 47px;
+    bottom: 26px;
+    left: 26px;
+  }
+
+  .all-banners__wrapper {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 555px) {
+
+  .all-banners__discount-time::before,
+  .all-banners__december::before,
+  .all-banners__dresses::before {
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .all-banners__red-cross::before,
+  .all-banners__household-chemicals::before {
+    top: 5px;
+    left: 5px;
+  }
+
+  /* баннеры xl */
+
+  .banner-size-xl {
+    max-height: 118px;
+    border-radius: 8px;
+  }
+
+  /* баннеры l */
+
+  .banner-size-l {
+    border-radius: 8px;
+  }
+
+  .all-banners__wrapper {
+    grid-template-columns: minmax(120px, 130px) minmax(120px, 130px);
+    gap: 20px 20px;
+    grid-template-areas:
+      "book discount-time"
+      "red-cross red-cross"
+      "two-pairs two-pairs"
+      "two-pairs two-pairs"
+      "gift-ideas gift-ideas"
+      "december december"
+      "dresses double-block"
+      "dresses double-block"
+      "christmas-decorations christmas-decorations";
+  }
+
+  /* Книга - лучший подарок */
+
+  .all-banners__book-title {
+    max-width: 65px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  /* Время скидок */
+
+  .all-banners__discount-time-title {
+    bottom: 86px;
+    left: 10px;
+  }
+
+  .all-banners__red-cross {
+    background-position: left 0 top -30px;
+  }
+
+  /* красные кросы */
+
+  .all-banners__red-cross {
+    background-position: left 0 top -45px;
+  }
+
+  /* Вторая пара кроссовок */
+
+  .all-banners__two-pairs {
+    background-position: left 0 bottom -100px;
+    max-height: 206px;
+    border-radius: 8px;
+  }
+
+  .all-banners__two-pairs-title {
+    padding: 7px 23px 11px;
+    font-size: 12px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 6px;
+  }
+
+  /* Идеи новогодних подарков */
+
+  .all-banners__gift-ideas {
+    background-position: left 0 bottom -30px;
+  }
+
+  .all-banners__gift-ideas-title {
+    font-size: 12px;
+    left: 10px;
+    bottom: 16px;
+  }
+
+  /* выгодно в декабре */
+
+  .all-banners__december-title {
+    left: 10px;
+    bottom: 16px;
+    font-size: 12px;
+  }
+
+  /* девушка в красном */
+
+  .all-banners__dresses {
+    max-height: 195px;
+    align-self: center;
+    background-position: left -20px bottom 0;
+    border-radius: 8px;
+  }
+
+  /* бытовая химия */
+
+  .all-banners__red-balls,
+  .all-banners__household-chemicals {
+    max-height: 95px;
+  }
+
+  .all-banners__household-chemicals {
+    background-position: left 0 bottom 0;
+  }
+
+  .all-banners__household-chemicals-title {
+    bottom: 11px;
+    left: 9px;
+    font-size: 12px;
+  }
+
+  /* Новогодние украшения */
+
+  .all-banners__christmas-decorations {
+    max-height: 123px;
+    margin: 0;
+    border-radius: 8px;
+    background-position: left 0 top -55px;
+  }
+
+  .all-banners__christmas-decorations-title {
+    font-size: 12px;
+    padding: 7px 30px 9px;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .all-banners__wrapper {
+    margin-bottom: 35px;
+  }
+
+  .banner-size-xl::after,
+  .banner-size-l::after,
+  .all-banners__two-pairs::after,
+  .all-banners__christmas-decorations::after,
+  .all-banners__dresses::after,
+  .all-banners__red-cross::after {
+    border-radius: 8px;
+  }
+}

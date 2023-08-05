@@ -1,0 +1,150 @@
+.article {
+  font-family: 'Lato';
+}
+
+.article_visible {
+  display: flex;
+  z-index: 2;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 145px;
+}
+
+.article__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.breadcrumb {
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.breadcrumb__item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.breadcrumb-icon {
+  width: 18px;
+  height: 18px;
+  padding: 4.5px 6.5px;
+}
+
+.article__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.article__title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 130%;
+}
+
+.article__paragraf {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.article__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.article__autor-name {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.article__btn-back {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  border: none;
+  background: transparent;
+  max-height: 24px;
+  align-self: end;
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-end;
+  color: #2D2D2D;
+}
+
+.article__btn-back-icon {
+  width: 24px;
+  height: 24px;
+  padding: 6px 3px;
+}
+
+.article__autor-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article__autor-name {
+  margin: 0 0 0 auto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.article__user-box {
+  gap: 15px;
+}
+
+.article__time {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #8F8F8F;
+}
+
+.article__user-box {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.article__user:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.article__user:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  align-items: center;
+}
+
+.article__views-text,
+.article__chat-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #8F8F8F;
+}

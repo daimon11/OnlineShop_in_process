@@ -1,0 +1,27 @@
+@import 'components/var';
+@import 'components/normalize';
+@import 'components/default';
+@import 'components/header';
+@import 'components/main-promotion';
+@import 'components/all-banners';
+@import 'components/fonts';
+@import 'components/articles';
+@import 'components/profitable';
+@import 'components/footer';
+@import 'components/article-modal';
+@import 'components/adds-banners';
+@import 'components/card';
+@import 'components/basket';
+@import 'components/preloader';
+
+.text-light {
+  @extend %paragrafGreyLight;
+}
+
+.text-blue {
+  color: $color-bluе;
+}
+
+.text-gray {
+  color: $color-text-light;
+}

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const createLink = url => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.append(link);
+      };
+      createLink('css/index.min.css');
+    })
+  </script>
+
+  <script defer type="module" src="js/index.min.js"></script>
+
+  <title>Article</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./img/header_logo.svg" alt="Изображение логотипа" class="header__logo-img" width="188"
+                    height="31">
+            </div>
+            <button class="header__btn-menu header__btn-menu--type_close" aria-haspopup="menu"
+                aria-label="открыть меню">
+                <span class="header__menu-text">Меню</span>
+            </button>
+            <form action="#" class="header__form">
+                <input type="text" class="header__search-input" placeholder="Я ищу..."
+                    aria-label="поле для ввода поискового значения">
+                <button class="header__search-btn">
+                    <img src="./img/header_search.svg" alt="Изображение поиска" class="header__search-img"
+                        width="26" height="26">
+                </button>
+            </form>
+            <ul class="header__btns-group">
+
+                <li class="header__btn">
+                    <button class="btn" aria-label="вход в личный кабинет">
+                        <img src="./img/header_profil.svg" alt="Изображение профиля" class="btn-user-icon"
+                            width="26" height="26">
+                    </button>
+                    <span class="header__btns-text">Профиль</span>
+                </li>
+
+                <li class="header__btn">
+                    <button class="btn btn--with_num" aria-label="корзина с товарами">
+                        <img src="./img/header_basket.svg" alt="Изображение корзины" class="btn-user-icon"
+                            width="26" height="25">
+                        <span class="number-goods">2</span>
+                    </button>
+                    <span class="header__btns-text">Корзина</span>
+                </li>
+
+                <li class="header__btn">
+                    <button class="btn">
+                        <img src="./img/header_favorit.svg" alt="Изображение избранного" class="btn-user-icon"
+                            aria-label="Избранное" width="30" height="29" type="button">
+                    </button>
+                    <span class="header__btns-text">Избранное</span>
+                </li>
+            </ul>
+        </div>
+        <div class="header__menu-group header__menu-group--type_close">
+            <div class="header__menu-overlay">
+                <div class="header__menu-body container">
+                    <div class="header__menu-block header__menu-block--big_weight">
+                    </div>
+                    <div class="header__menu-block">
+                        <h5 class="header__menu-title">Покупателям</h5>
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">Оплата заказа</li>
+                            <li class="header__menu-item">Условия доставки</li>
+                            <li class="header__menu-item">Условия возврата заказа</li>
+                            <li class="header__menu-item">Блог</li>
+                        </ul>
+                    </div>
+                    <div class="header__menu-block">
+                        <h5 class="header__menu-title">Связаться с нами</h5>
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">Контакты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+  <main>
+    <div class="container">
+      <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+          <a href="./index.html"  class="link-to-home">Главная</a>
+          <img src="./img/breadcrumb-icon.svg" alt="Иконка хлебной крошки" class="breadcrumb-icon">
+        </li>
+        <li class="breadcrumb__item">
+          <a href="./basket.html"  class="link-to-home">Корзина</a>
+        </li>
+      </ul>
+
+      <div class="buy">
+
+        <div class="buy__wrapper">
+
+          <div class="buy__basket">
+
+            <h2 class="buy__title">Корзина
+              <span class="title-add">2</span>
+            </h2>
+            <div class="buy__btn-group">
+              <button class="buy__btn-all-sel buy__btn-all-sel--type_on">
+                <img src="./img/done.svg" alt="Иконка галочки" class="icone-done">
+                Выбрать все
+              </button>
+              <button class="buy__btn-del">
+                <img src="./img/btn-delete.svg" alt="Иконка корзины">
+              </button>
+            </div>
+
+          </div>
+
+          <div class="buy__shiping">
+
+            <div class="buy__title-block">
+              <h2 class="buy__title type-hidden-910">Способ доставки</h2>
+              <button class="buy__btn-shiping">Изменить</button>
+            </div>
+
+            <div class="buy__shiping-wrapper">
+              <p class="buy__point text-gray type-hidden-910">Пункт выдачи</p>
+              <p class="buy__point-name">г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи),
+                Ежедневно 10:00-21:00</p>
+
+              <p class="buy__price-ship text-gray type-hidden-910">Стоимость доставки</p>
+              <p class="buy__price-ship-sum">Бесплатно</p>
+
+              <p class="buy__price-time">10-13 февраля</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="buy__prices">
+          <p class="buy__final-price">
+            <span class="buy__title-item">Итого:</span>
+            <span class="buy__title-item buy__title-item--type_sum"></span>
+          </p>
+
+          <div class="buy__final-info">
+            <div class="buy__price-block">
+              <span class="buy__items-info-count buy__items-info-count--type_all_prod text-light">Товары, 2 шт.</span>
+              <span class="buy__items-info buy__items-info--type_sum text-light">145 080 ₽</span>
+            </div>
+            <div class="buy__sale-block">
+              <span class="buy__items-info-count text-light">Скидка</span>
+              <span class="buy__items-info buy__items-info--type_discount text-light">32 088 ₽</span>
+            </div>
+            <div class="buy__ship-block">
+              <span class="buy__items-info-count text-light">Доставка</span>
+              <span class="buy__items-info text-light">Бесплатно</span>
+            </div>
+          </div>
+
+          <div class="buy__ship-info">
+            <p class="buy__ship-name">
+              Доставка: <span class="text-blue">Пункт выдачи</span>
+            </p>
+
+            <div class="buy__final-ship">
+              <p class="buy__duty text-light">Ежедневно 10:00 - 21:00</p>
+              <p class="buy__location text-light">г. Москва (Московская область), улица Павлика Морозова, д. 48</p>
+            </div>
+          </div>
+
+          <p class="buy__ship-date">Дата: <span class="text-blue">10-13 февраля</span></p>
+          <p class="buy__ship-payment">Оплата: <span class="text-blue">картой</span></p>
+
+
+          <button class="buy__btn-buy">Заказать</button>
+
+          <div class="buy__confirmation">
+            <button class="buy__btn-sel buy__btn-sel--type_on">
+              <img src="./img/done.svg" alt="Иконка галочки" class="icone-done">
+            </button>
+            <p class="buy__confirmation-text text-light">
+              <span class="text-gray-bold">Согласен с условиями</span> правил пользования торговой площадкой и правилами
+              возврата
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <section class="profitable">
+      <div class="container">
+        <h2 class="profitable__title">Рекомендуем также</h2>
+
+        <ul class="profitable__product-list">
+
+          <li class="profitable__item">
+            <a href="#" class="profitable__item-link" aria-label="Пара белых футболок 1299 ₽">
+              <picture>
+                <source srcset="./img/profitable_two-tshirts.avif" type="image/avif">
+                <source srcset="./img/profitable_two-tshirts.webp" type="image/webp">
+                <img src="./img/profitable_two-tshirts.jfif" alt="Пара белых футболок" class="profitable__item-img"
+                  width="420" height="295" loading="lazy">
+              </picture>
+              <div class="profitable__price">
+                <span class="new-price">1299 ₽</span>
+                <span class="old-price">2589 ₽</span>
+              </div>
+              <h4 class="profitable__title-item">Пара футболок</h4>
+            </a>
+          </li>
+
+          <li class="profitable__item">
+            <a href="#" class="profitable__item-link" aria-label="Кроссовки 2099 ₽">
+              <picture>
+                <source srcset="./img/profitable_sneakers.avif" type="image/avif">
+                <source srcset="./img/profitable_sneakers.webp" type="image/webp">
+                <img src="./img/profitable_sneakers.jfif" alt="Кроссовки" class="profitable__item-img" width="420"
+                  height="295" loading="lazy">
+              </picture>
+              <div class="profitable__price">
+                <span class="new-price">2099 ₽</span>
+                <span class="old-price">5938 ₽</span>
+              </div>
+              <h4 class="profitable__title-item">Кроссовки</h4>
+            </a>
+          </li>
+
+          <li class="profitable__item">
+            <a href="#" class="profitable__item-link" aria-label="Постельное белье 3902 ₽">
+              <picture>
+                <source srcset="./img/profitable_profitable_bed.avif" type="image/avif">
+                <source srcset="./img/profitable_profitable_bed.webp" type="image/webp">
+                <img src="./img/profitable_profitable_bed.jfif" alt="Кровать" class="profitable__item-img" width="420"
+                  height="295" loading="lazy">
+              </picture>
+              <div class="profitable__price">
+                <span class="new-price">3902 ₽</span>
+                <span class="old-price">4490 ₽</span>
+              </div>
+              <h4 class="profitable__title-item">Постельное белье</h4>
+            </a>
+          </li>
+
+          <li class="profitable__item">
+            <a href="#" class="profitable__item-link" aria-label="Фен 2999 ₽">
+              <picture>
+                <source srcset="./img/profitable_hair-dryer.avif" type="image/avif">
+                <source srcset="./img/profitable_hair-dryer.webp" type="image/webp">
+                <img src="./img/profitable_hair-dryer.jfif" alt="Фен"
+                  class="profitable__item-img profitable__item-img--position_botton" width="420" height="295"
+                  loading="lazy">
+              </picture>
+              <div class="profitable__price">
+                <span class="new-price">2999 ₽</span>
+                <span class="old-price">6030 ₽</span>
+              </div>
+              <h4 class="profitable__title-item">Фен</h4>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <img src="./img/footer_logo.svg" alt="Изображение логотипа" class="footer__logo-img" width="188" height="31"
+            loading="lazy">
+        </div>
+
+        <div class="footer__catalog">
+          <h5 class="footer__title footer__title--type_close">Каталог</h5>
+          <ul class="footer__list footer__list--type_hidden">
+            <li class="footer__item">
+              <a href="card.html" class="footer__item-link">Смартфоны</a>
+            </li>
+            <li class="footer__item">
+              <a href="card.html" class="footer__item-link">Ноутбуки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Ювелирные изделия</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Одежда</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Бытовая техника</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Бытовая техника</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Книги и журналы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Домашний текстиль</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Электроника</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Косметика</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__buyers">
+          <h5 class="footer__title footer__title--type_close">Покупателям</h5>
+          <ul class="footer__list footer__list--type_hidden">
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Оплата заказа</a>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Условия доставки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__item-link">Условия возврата заказа</a>
+            </li>
+            <li class="footer__item">
+              <a href="blog.html" class="footer__item-link">Блог</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__footer__contacts">
+          <h5 class="footer__title">Контакты</h5>
+          <address class="footer__contacts">
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="tel:89378392361" class="footer__item-link footer__item-link--lil_size">+7 937
+                  839
+                  23-61</a>
+              </li>
+              <li class="footer__item">
+                <a href="malito:OnlineShop@gmail.com" class="footer__item-link footer__item-link--lil_size"
+                  target="_blank">Email:
+                  OnlineShop@gmail.com</a>
+              </li>
+            </ul>
+
+            <div class="footer__social-links">
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a href="#" class="footer__link-social">
+                    <img src="./img/sl_wt.svg" alt="whatsapp" class="icon-social" width="26" height="26">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__link-social">
+                    <img src="./img/sl_inst.svg" alt="instagram" class="icon-social" width="22" height="22">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__link-social">
+                    <img src="./img/sl_youtube.svg" alt="youtube" class="icon-social" width="26" height="26">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__link-social">
+                    <img src="./img/sl_fb.svg" alt="facebook" class="icon-social" width="26" height="26">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__link-social">
+                    <img src="./img/sl_tg.svg" alt="telegram" class="icon-social" width="26" height="26">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer__info-block">
+        <span class="footer__info-text">© OnlineShop, 2021</span>
+        <div class="footer__author-block">
+          <p class="footer__author-name">
+            Design by Anastasia Ilina
+          </p>
+          <a href="#" class="footer__item-link footer__item-link--lil_size">Tg: @Mrshmallowww</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

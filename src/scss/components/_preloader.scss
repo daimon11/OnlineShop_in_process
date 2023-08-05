@@ -1,0 +1,22 @@
+.overlay {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 140px);
+  padding-top: 150px;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+}
+
+.overlay svg {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+}

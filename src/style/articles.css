@@ -1,0 +1,136 @@
+.articles {
+  padding-bottom: 100px;
+}
+
+.articles__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 645px 645px;
+  gap: 50px 143px;
+}
+
+.topic {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 645px;
+}
+
+.topic__img {
+  width: 195px;
+  height: 195px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.topic__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topic__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.topic__title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  color: #2D2D2D;
+  padding-top: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+}
+
+.topic__time {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #8F8F8F;
+}
+
+.topic__user-box {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+
+.topic__user:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.topic__user:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  align-items: center;
+}
+
+.topic__views-text,
+.topic__chat-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #8F8F8F;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 150px;
+}
+
+.pagination__btn {
+  margin: 9px 5px;
+  width: 28px;
+  height: 18.5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.pagination__page-list {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #2D2D2D;
+  border-radius: 4px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.item-active {
+  color: #3670C7;
+  border: 2px solid #3670C7;
+}
+
+.item-icon-disabled {
+  fill: #8F8F8F;
+}

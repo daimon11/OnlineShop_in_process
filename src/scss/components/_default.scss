@@ -1,0 +1,163 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  /* указать шрифт под проект*/
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+fieldset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset,
+blockquote {
+  margin: 0;
+}
+
+figure {
+  padding: 0;
+}
+
+iframe,
+input,
+fieldset,
+button {
+  border: 0 none;
+}
+
+button {
+  background: transparent;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1854px;
+  padding: 0 42px;
+  margin: 0 auto;
+
+  @media (max-width: 1430px) {
+    max-width: 1008px;
+    padding: 0 34px;
+  }
+  
+  @media (max-width: 910px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 320px;
+    padding: 0 20px;
+  }
+}
+
+.title-size-1 {
+  @extend %titleSizeOne;
+}
+
+.title-size-2 {
+  @extend %titleSizeTwo;
+}
+
+.title-size-3 {
+  @extend %titleSizeThree;
+}
+
+.size-bold {
+  @extend %sizeBoldText
+}
+
+section {
+  padding: 30px 0;
+
+  @media (max-width: 1430px) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: 910px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 10px 0;
+  }
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

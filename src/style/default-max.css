@@ -1,0 +1,246 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  /* указать шрифт под проект*/
+  font-size: 16px;
+  font-weight: 400;
+  color: #2D2D2D;
+  /*цвет под ваш проект*/
+  background-color: #ffffff;
+  /*цвет под ваш проект*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align:bottom
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+fieldset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset,
+blockquote {
+  margin: 0;
+}
+
+figure {
+  padding: 0;
+}
+
+iframe,
+input,
+fieldset,
+button {
+  border: 0 none;
+}
+
+button {
+  background: transparent;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1854px;
+  padding: 0 42px;
+  margin: 0 auto;
+}
+
+.title-size-1 {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 130%;
+  padding-top: 145px;
+  margin-left: 112px;
+  margin-bottom: 100px;
+}
+
+.title-size-2 {
+  position: absolute;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.title-size-3 {
+  position: absolute;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.size-bold {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+section {
+  padding: 30px 0;
+}
+
+@media (max-width: 1430px) {
+  .container {
+    max-width: 1008px;
+    padding: 0 34px;
+  }
+
+  .title-size-1 {
+    font-size: 40px;
+    padding-top: 80px;
+    margin-left: 80px;
+    margin-bottom: 11px;
+    max-width: 400px;
+  }
+
+  .title-size-2 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .title-size-3 {
+    font-size: 24px;
+  }
+
+  .size-bold {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 910px) {
+  .container {
+    /* max-width: 740px; */
+    padding: 0 20px;
+  }
+
+  .title-size-1 {
+    font-size: 30px;
+    padding-top: 64px;
+    margin-left: 80px;
+    margin-bottom: 82px;
+  }
+
+  .title-size-2 {
+    font-size: 16px;
+    line-height: 17.6px;
+    font-weight: 700;
+  }
+
+  .title-size-3 {
+    font-size: 16px;
+  }
+
+  .size-bold {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  .size-bold {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 320px;
+    padding: 0 20px;
+  }
+
+  .title-size-1 {
+    font-size: 22px;
+    padding-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 189px;
+  }
+
+  .title-size-2 {
+    font-size: 12px;
+  }
+
+  .title-size-3 {
+    font-size: 12px;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .size-bold {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  section {
+    padding: 10px 0;
+  }
+
+  .size-bold {
+    font-size: 16px;
+  }
+}

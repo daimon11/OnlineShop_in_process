@@ -1,0 +1,577 @@
+.banner-size-xl {
+  position: relative;
+  height: 228px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 0 top 60%;
+  z-index: -1;
+  border-radius: 20px;
+
+  @media (max-width: 1430px) {
+    height: 217px;
+  }
+
+  @media (max-width: 910px) {
+    height: 140px;
+  }
+
+  @media (max-width: 500px) {
+    height: 118px;
+    border-radius: 8px;
+  }
+
+  &::after,
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%);
+    z-index: -1;
+    border-radius: 20px;
+  }
+}
+
+.banner-size-l {
+  position: relative;
+  height: 228px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -30px bottom 0;
+  z-index: -1;
+  border-radius: 20px;
+
+  @media (max-width: 1430px) {
+    height: 217px;
+  }
+
+  @media (max-width: 910px) {
+    height: 140px;
+    background-position: right 0 top 0;
+  }
+
+  @media (max-width: 500px) {
+    height: 130px;
+    border-radius: 8px;
+  }
+
+  &:last-child {
+    @media (max-width: 910px) {
+      height: 60px;
+    }
+
+    @media (max-width: 500px) {
+      height: 130px;
+    }
+  }
+}
+
+.all-banners {
+
+  &__discount-time::before,
+  &__red-cross::before,
+  &__december::before,
+  &__dresses::before,
+  &__household-chemicals::before {
+    content: '';
+    position: absolute;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    color: #FFFFFF;
+    padding: 24px 9px;
+    background: #FFBD13;
+    border-radius: 50%;
+
+    @media (max-width: 910px) {
+      font-size: 16px;
+      line-height: 20.8%;
+      padding: 24px 7px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px) minmax(140px, 245px);
+    gap: 60px 60px;
+    grid-template-areas:
+      "book discount-time two-pairs two-pairs gift-ideas gift-ideas"
+      "red-cross red-cross two-pairs two-pairs december december"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations dresses double-block"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations dresses double-block";
+
+    @media (max-width: 1430px) {
+      grid-template-columns: minmax(140px, 217px) minmax(140px, 217px) minmax(140px, 217px) minmax(140px, 217px);
+      gap: 24px 24px;
+      grid-template-areas:
+      "book discount-time two-pairs two-pairs"
+      "red-cross red-cross two-pairs two-pairs"
+      "gift-ideas gift-ideas dresses double-block"
+      "december december dresses double-block"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations";
+    }
+
+    @media (max-width: 910px) {
+      grid-template-columns: minmax(100px, 140px) minmax(100px, 140px) minmax(100px, 100%) minmax(100px, 140px);
+      gap: 20px 20px;
+      grid-template-areas:
+      "book discount-time two-pairs two-pairs"
+      "book discount-time two-pairs two-pairs"
+      "red-cross red-cross two-pairs two-pairs"
+      "red-cross red-cross two-pairs two-pairs"
+      "gift-ideas gift-ideas two-pairs two-pairs"
+      "gift-ideas gift-ideas dresses double-block"
+      "december december dresses double-block"
+      "december december dresses double-block"
+      "christmas-decorations christmas-decorations christmas-decorations christmas-decorations";
+      margin: 0 auto;
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: minmax(100px, 130px) minmax(100px, 130px);
+      grid-template-areas:
+        "book discount-time"
+        "red-cross red-cross"
+        "two-pairs two-pairs"
+        "gift-ideas gift-ideas"
+        "december december"
+        "dresses double-block"
+        "dresses double-block"
+        "christmas-decorations christmas-decorations";
+    }
+  }
+
+  // }
+
+  &__discount-time::before,
+  &__december::before,
+  &__dresses::before {
+    content: '-25%';
+    right: 20px;
+    bottom: 20px;
+
+    @media (max-width: 910px) {
+      right: 10px;
+      bottom: 10px;
+    }
+
+    @media (max-width: 500px) {
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+
+  &__december::before {
+    content: '-15%';
+  }
+
+  &__dresses::before {
+    content: '-55%';
+  }
+
+  &__red-cross::before,
+  &__household-chemicals::before {
+    content: '-40%';
+    top: 20px;
+    left: 20px;
+
+    @media (max-width: 910px) {
+      top: 10px;
+      left: 10px;
+    }
+
+    @media (max-width: 500px) {
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  &__household-chemicals::before {
+    content: '-25%';
+  }
+
+  &__two-pairs::after,
+  &__christmas-decorations::after,
+  &__dresses::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%);
+    z-index: -1;
+    border-radius: 20px;
+  }
+
+  &__book {
+    background-image: url('../img/banner002.jpg');
+    background-image: -webkit-image-set(
+      url('../img/banner002.avif') 1x,
+      url('../img/banner002.webp') 1x
+      // url('../img/banner002.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner002.avif') 1x,
+      url('../img/banner002.webp') 1x
+      // url('../img/banner002.jpg') 1x
+    );
+    grid-area: book;
+  }
+
+  &__book-title {
+    max-width: 190px;
+    left: 20px;
+    right: 10px;
+    bottom: 20px;
+
+    @media (max-width: 910px) {
+      max-width: 115px;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 65px;
+    }
+  }
+
+  &__discount-time {
+    background-image: url(../img/banner003.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner003.avif') 1x,
+      url('../img/banner003.webp') 1x
+      // url('../img/banner003.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner003.avif') 1x,
+      url('../img/banner003.webp') 1x
+      // url('../img/banner003.jpg') 1x
+    );
+    background-position: left -45px top 0;
+    grid-area: discount-time;
+
+    &-title {
+      max-width: 206px;
+      bottom: 122px;
+      left: 14px;
+
+      @media (max-width: 910px) {
+        bottom: 104px;
+        left: 5px;
+      }
+    }
+  }
+
+  &__two-pairs {
+    position: relative;
+    background-image: url(../img/banner005.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner005.avif') 1x,
+      url('../img/banner005.webp') 1x
+    );
+    background-image: image-set(
+      url('../img/banner005.avif') 1x,
+      url('../img/banner005.webp') 1x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 0 top 0;
+    background-color: whitesmoke;
+    font-weight: 400;
+    height: 516px;
+    border-radius: 20px;
+    grid-area: two-pairs;
+
+    @media (max-width: 1430px) {
+      height: 458px;
+    }
+
+    @media (max-width: 910px) {
+      height: 380px;
+      background-position: left 0 top -50px;
+    }
+
+    @media (max-width: 500px) {
+      height: 280px;
+      background-position: left 0 bottom 0;
+      border-radius: 8px;
+    }
+
+    &-title {
+      max-width: 510px;
+      padding: 24px 26px;
+      background: #38C0EB;
+      border-radius: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 14px;
+
+      @media (max-width: 1430px) {
+        padding: 29px 80px 29px 25px;
+        line-height: 48px;
+      }
+
+      @media (max-width: 910px) {
+        padding: 16px 28px 16px 28px;
+        line-height: 26px;
+        left: 10px;
+        left: 10px;
+        bottom: 10px;
+      }
+
+      @media (max-width: 500px) {
+        padding: 16px 0 16px 15px;
+        line-height: 13.2px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__gift-ideas {
+    background-image: url(../img/banner007.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner007.avif') 1x,
+      url('../img/banner007.webp') 1x
+      // url('../img/banner007.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner007.avif') 1x,
+      url('../img/banner007.webp') 1x
+      // url('../img/banner007.jpg') 1x
+    );
+    background-position: left 0 bottom -50px;
+    grid-area: gift-ideas;
+
+    @media (max-width:910px) {
+      background-position: left 0 bottom -20px;
+    }
+
+    &-title {
+      max-width: 345px;
+      left: 30px;
+      bottom: 30px;
+
+      @media (max-width: 910px) {
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+  }
+
+  &__red-cross {
+    background-image: url(../img/banner004.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner004.avif') 1x,
+      url('../img/banner004.webp') 1x
+      // url('../img/banner004.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner004.avif') 1x,
+      url('../img/banner004.webp') 1x
+      // url('../img/banner004.jpg') 1x
+    );
+    background-position: left 0 bottom -50px;
+    grid-area: red-cross;
+
+    @media (max-width:910px) {
+      background-position: left 0 bottom -20px;
+    }
+  }
+
+  &__december {
+    background-image: url(../img/banner006.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner006.avif') 1x,
+      url('../img/banner006.webp') 1x
+      // url('../img/banner006.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner006.avif') 1x,
+      url('../img/banner006.webp') 1x
+      // url('../img/banner006.jpg') 1x
+    );
+    background-position: left 0 bottom -60px;
+    grid-area: december;
+
+    @media (max-width:910px) {
+      background-position: left 0 bottom -20px;
+    }
+
+    @media (max-width:500px) {
+      background-position: left 0 bottom -30px;
+    }
+
+    &-title {
+      max-width: 393px;
+      left: 30px;
+      bottom: 40px;
+
+      @media (max-width: 910px) {
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+  }
+
+  &__christmas-decorations {
+    position: relative;
+    background-image: url(../img/banner009.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner009.avif') 1x,
+      url('../img/banner009.webp') 1x
+      // url('../img/banner009.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner009.avif') 1x,
+      url('../img/banner009.webp') 1x
+      // url('../img/banner009.jpg') 1x
+    );
+    background-position: left 0 top -150px;
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 516px;
+    border-radius: 20px;
+    grid-area: christmas-decorations;
+
+    @media (max-width: 1430px) {
+      height: 418px;
+    }
+
+    @media (max-width: 910px) {
+      max-height: 337px;
+      background-position: left 0 top -120px;
+    }
+
+    @media (max-width: 500px) {
+      height: 123px;
+      background-position: left 0 top -50px;
+      border-radius: 8px;
+      background-size: cover;
+    }
+
+    &-title {
+      position: absolute;
+      padding: 30px 40px;
+      color: #F91155;
+      text-transform: uppercase;
+      background: #FFFFFF;
+      border-radius: 20px;
+      bottom: 50px;
+      left: 50px;
+
+      @media (max-width: 910px) {
+        left: 26px;
+        bottom: 26px;
+        padding: 22px 33px;
+        font-size: 20px;
+      }
+
+      @media (max-width: 500px) {
+        left: 15px;
+        bottom: 10px;
+        padding: 7px 30px 9px;
+        font-size: 14px;
+        line-height: 14.4px;
+      }
+    }
+  }
+
+  &__dresses {
+    position: relative;
+    background-image: url(../img/banner010.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner010.avif') 1x,
+      url('../img/banner010.webp') 1x
+      // url('../img/banner010.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner010.avif') 1x,
+      url('../img/banner010.webp') 1x
+      // url('../img/banner010.jpg') 1x
+    );
+    background-position: left -90px bottom 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 516px;
+    border-radius: 20px;
+    grid-area: dresses;
+
+    @media (max-width: 1430px) {
+      height: 458px;
+    }
+
+    @media (max-width: 910px) {
+      height: 220px;
+      background-position: left 0 top 0;
+    }
+
+    @media (max-width: 500px) {
+      height: 280px;
+      background-position: left -50px top 0;
+      border-radius: 8px;
+    }
+  }
+
+  &__double-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: double-block;
+  }
+
+  &__household-chemicals {
+    background-image: url(../img/banner011.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner011.avif') 1x,
+      url('../img/banner011.webp') 1x
+      // url('../img/banner011.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner011.avif') 1x,
+      url('../img/banner011.webp') 1x
+      // url('../img/banner011.jpg') 1x
+    );
+    background-position: left -70px bottom 0;
+    width: 100%;
+
+    @media (max-width: 910px) {
+      background-position: right -30px bottom 0;
+    }
+
+    &-title {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  &__red-balls {
+    background-image: url(../img/banner012.jpg);
+    background-image: -webkit-image-set(
+      url('../img/banner012.avif') 1x,
+      url('../img/banner012.webp') 1x
+      // url('../img/banner012.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/banner012.avif') 1x,
+      url('../img/banner012.webp') 1x
+      // url('../img/banner012.jpg') 1x
+    );
+    background-position: left 0 bottom 0;
+    background-size: 180%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    width: 100%;
+
+    @media (max-width: 910px) {
+      height: 60px;
+    }
+  }
+
+  &__gift-ideas-title,
+  &__december-title,
+  &__household-chemicals-title,
+  &__book-title {
+    @media (max-width: 500px) {
+      left: 10px;
+      bottom: 16px;
+    }
+  }
+}

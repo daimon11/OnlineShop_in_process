@@ -1,0 +1,79 @@
+.footer {
+  padding: 80px 0;
+  background: #2D2D2D;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__logo {
+  height: 41px;
+  margin-right: 118px;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.footer__catalog {
+  width: 480px;
+  margin-right: 98px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-height: 250px;
+  word-break: break-all;
+}
+
+.footer__item {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item-link {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.footer__buyers {
+  margin-right: 127px;
+}
+
+.footer__item-link--lil_size,
+.footer__author-name,
+.footer__info-text {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.footer__list {
+  margin-bottom: 36px;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__info-block {
+  display: flex;
+  gap: 1120px;
+}

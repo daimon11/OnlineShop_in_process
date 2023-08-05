@@ -1,0 +1,6 @@
+@import url(normalize.css); /* нормализация */
+@import url(default-max.css); /* от Макса */
+@import url(fonts.css); /* шрифты */
+@import url(articles.css); /* блог */
+@import url(article-modal.css); /* статья */
+@import url(adds-banners.css); /* статья */
