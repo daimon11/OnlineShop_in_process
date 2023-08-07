@@ -1,9 +1,11 @@
 import { createElements, createLastLink } from "./createElements.js";
 
-//! надо дописать данную функцию на атоматическое обновление сумм в коризне
-//  export const renderPrices = (data) => {
-//   const finishSum = document.querySelector()
-// }
+//! 1 - упорядочить init().then в index.js 
+//! 2 - поправить стили в корзине, чтобы скидка была внтури картинки
+//! 3 - если корзина пустая, то не надо рендерить блоки, а просто надпись что корзина пустая
+//! 4 - добавить все стили на кнопки в зависмости от их состояний 
+//! 5 - прелоадер должен закрывать всю страницу  
+
 
 export const updateQuantity = (data) => {
   return data.reduce((acc, item) => acc + item.count, 0)
@@ -22,7 +24,6 @@ const iterateArray = (arr, maxQuantity) => {
 }
 
 const getCategory = (arr, str) => {
-
   return arr.filter(item => item.category === str);
 }
 

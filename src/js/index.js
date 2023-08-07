@@ -275,6 +275,8 @@ if (htmlName === 'card') {
 
     const btnAdd = document.querySelector('.card__btn-add');
 
+console.log('card then', result[0].product)
+
     btnAdd.addEventListener('click', () => {
 
       updateData(result[0].product, basketData);
@@ -333,14 +335,28 @@ if (htmlName === 'basket') {
     headerCatalog.append(result[1]);
     footerCatalog.append(result[2]);
     document.querySelector('.buy__basket').append(result[3].buyList);
-    document.querySelector('.buy__title-item--type_sum').innerHTML = result[3].allSum + ' ₽';
-    document.querySelector('.buy__title-item--type_sum').innerHTML = result[3].allSum + ' ₽';
-    document.querySelector('.buy__items-info-count--type_all_prod').innerHTML = `Товары, ${result[3].allCount} шт.`
-    document.querySelector('.buy__items-info--type_sum').innerHTML = result[3].allSum + result[3].alldiscount + ' ₽';
-    document.querySelector('.buy__items-info--type_discount').innerHTML = result[3].alldiscount + ' ₽';
+    const infoAllSum = document.querySelector('.buy__items-info-count--type_all_prod');
+    const oldAllSum = document.querySelector('.buy__items-info--type_sum');
+    const saleAllSum = document.querySelector('.buy__items-info--type_discount');
+    const finalPrice = document.querySelector('.buy__title-item--type_sum');
+    const titleCount = document.querySelector('.title-add')
+    finalPrice.innerHTML = result[3].allSum + ' ₽';
+    infoAllSum.innerHTML = `Товары, ${result[3].allCount} шт.`
+    oldAllSum.innerHTML = result[3].allSum + result[3].alldiscount + ' ₽';
+    saleAllSum.innerHTML = result[3].alldiscount + ' ₽';
+    titleCount.innerHTML = updateQuantity(basketData);
     document.querySelector('.buy__shiping-wrapper').append(result[3].imagesBlock);
 
-    basketControl(document.querySelectorAll('.buy__item'), basketData, basketGoods);
+    basketControl(
+      document.querySelectorAll('.buy__item'),
+      basketData,
+      basketGoods,
+      {
+        infoAllSum,
+        oldAllSum,
+        saleAllSum,
+        finalPrice,
+      });
   });
   console.log('basket !!!');
 }

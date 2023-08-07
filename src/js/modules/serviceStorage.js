@@ -22,7 +22,10 @@ export const removeStorage = (id, data) => {
 
 export const updateData = (product, arr) => {
 
-  const foundItem = arr.find(item => item.id === product);
+  console.log('updateData arr', arr);
+  console.log('updateData product', product);
+
+  const foundItem = arr.find(item => item.id === product.id);
   console.log('foundItem', foundItem);
 
   if (foundItem) {
