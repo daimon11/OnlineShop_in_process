@@ -1,4 +1,4 @@
-import { updateQuantity } from './renderProducts.js';
+import { updateQuantity } from './render.js';
 import { setStorage } from './serviceStorage.js';
 
 const updateBasketPrices = (
@@ -8,7 +8,6 @@ const updateBasketPrices = (
     saleAllSum,
     finalPrice, }
 ) => {
-  console.log('updateBasketPrices', data);
 
   infoAllSum.innerHTML = `Товары, ${data.reduce((sum, item) => sum + item.count, 0)} шт.`;
 
@@ -24,7 +23,6 @@ const searchIndex = (arr, id) => {
 }
 
 export const basketControl = (data, products, basketIcon, elements) => {
-  console.log('basketControl', data, products);
   data.forEach(element => {
     element.addEventListener('click', e => {
       const target = e.target;

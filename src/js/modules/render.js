@@ -1,11 +1,16 @@
 import { createElements, createLastLink } from "./createElements.js";
+import { renderGoods } from './renderArticleList.js';
+import { paginationControl } from './pagination.js';
 
-//! 1 - упорядочить init().then в index.js 
-//! 2 - поправить стили в корзине, чтобы скидка была внтури картинки
-//! 3 - если корзина пустая, то не надо рендерить блоки, а просто надпись что корзина пустая
-//! 4 - добавить все стили на кнопки в зависмости от их состояний 
-//! 5 - прелоадер должен закрывать всю страницу  
+export const renderArticles = (page, result) => {
 
+  const btnPrev = document.querySelector('.pagination__btn-prev');
+  const btnNext = document.querySelector('.pagination__btn-next');
+  const pagesBtn = document.querySelectorAll('.item');
+
+  renderGoods(result);
+  paginationControl(btnPrev, btnNext, pagesBtn, page);
+};
 
 export const updateQuantity = (data) => {
   return data.reduce((acc, item) => acc + item.count, 0)
@@ -156,7 +161,7 @@ export const renderItemProduct = (data, elements) => {
         </div>
   `
 
-  return {card, product: data};
+  return { card, product: data };
 };
 
 const renderImgList = (data) => {
@@ -182,7 +187,13 @@ const renderImgList = (data) => {
 
 export const renderBasket = (arr, data) => {
 
-  const buyList = createElements('ul', 'buy__list');
+  let buyList;
+  
+  if (data.length < 1) {
+    buyList = 'Корзина пуста';
+  } else {
+    buyList = createElements('ul', 'buy__list');
+  };
 
   const buyArr = arr.filter(item => {
     return data.some(element => element.id === item.id);
@@ -197,34 +208,34 @@ export const renderBasket = (arr, data) => {
   let alldiscount = 0;
 
   buyArr.forEach(item => {
-    const itemBuy = createElements('li', 'buy__item', {id: item.id});
+    const itemBuy = createElements('li', 'buy__item', { id: item.id });
     itemBuy.innerHTML = `
-      <div class="buy__sel-wrapper">
-        <button class="buy__btn-sel buy__btn-sel--type_on">
-          <img src="./img/done.svg" alt="" class="icone-done">
-        </button>
-        <img src="https://quickest-cubic-pyroraptor.glitch.me/${item.image}" alt="Изображение товара" class="buy__img" width="130px"
-          max-height="130px">
+        <div class="buy__sel-wrapper">
+          <button class="buy__btn-sel buy__btn-sel--type_on">
+            <img src="./img/done.svg" alt="" class="icone-done">
+          </button>
+          <img src="https://quickest-cubic-pyroraptor.glitch.me/${item.image}" alt="Изображение товара" class="buy__img" width="130px"
+            max-height="130px">
+        </div>
+  
+        <div class="buy__description">
+          <p class="buy__title-prod">${item.title}</p>
+          <p class="buy__color">ID товара: ${item.id}</p>
+        </div>
+  
+      <div class="buy__quantity">
+        <button class="buy__btn-minus">-</button>
+        <span class="buy__digital">${item.count}</span>
+        <button class="buy__btn-plus">+</button>
       </div>
-
-      <div class="buy__description">
-        <p class="buy__title-prod">${item.title}</p>
-        <p class="buy__color">ID товара: ${item.id}</p>
+  
+      <div class="buy__price">
+        <span class="buy__new-price">${Math.round(item.price - (item.price * item.discount / 100))} ₽</span>
+        <span class="buy__old-price">${item.price} ₽</span>
+        <span class="buy__credit">В кредит от ${Math.round(item.price / 12)} ₽ </span>
       </div>
-
-    <div class="buy__quantity">
-      <button class="buy__btn-minus">-</button>
-      <span class="buy__digital">${item.count}</span>
-      <button class="buy__btn-plus">+</button>
-    </div>
-
-    <div class="buy__price">
-      <span class="buy__new-price">${Math.round(item.price - (item.price * item.discount / 100))} ₽</span>
-      <span class="buy__old-price">${item.price} ₽</span>
-      <span class="buy__credit">В кредит от ${Math.round(item.price / 12)} ₽ </span>
-    </div>
-
-    `;
+  
+      `;
     allImg.push(`https://quickest-cubic-pyroraptor.glitch.me/${item.image}`);
     allSum += Math.round((item.price - item.price * (item.discount / 100)) * item.count);
     allCount += item.count;
@@ -232,7 +243,7 @@ export const renderBasket = (arr, data) => {
     buyList.append(itemBuy);
   });
 
-  const imagesBlock = renderImgList(allImg);
+  const imagesBlock = data.length < 1 ? renderImgList(allImg) : '';
 
   return { buyList, allSum, allCount, alldiscount, imagesBlock };
-}
+};
